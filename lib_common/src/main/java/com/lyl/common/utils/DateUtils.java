@@ -21,7 +21,7 @@ public class DateUtils {
     public static final String FORMAT_YYYY_MM_DD_HH_MM = "yyyy-MM-dd HH:mm";
     public static final String FORMAT_YYYY2MM2DD = "yyyy.MM.dd";
     public static final String FORMAT_YYYY2MM2DD_HH_MM = "yyyy.MM.dd HH:mm";
-    public static final String FORMAT_MMCDD_HH_MM = "MM月dd日 HH:mm";
+    public static final String FORMAT_MMCDD_HH_MM = "MM月dd日 HH:mm"; 
     public static final String FORMAT_MMCDD = "MM月dd日";
     public static final String FORMAT_YYYYCMMCDD = "yyyy年MM月dd日";
 
