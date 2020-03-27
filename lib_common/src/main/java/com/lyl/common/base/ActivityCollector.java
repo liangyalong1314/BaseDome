@@ -1,0 +1,60 @@
+package com.lyl.common.base;
+
+import android.app.Activity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * @author admin
+ * 描述:     activity管理器
+ * 作者:     梁亚龙
+ * 时间:     2019/12/28
+ * 版本:     1.0
+ */
+public class ActivityCollector {
+    private static List<Activity> activitys = new ArrayList<Activity>();
+
+    /**
+     * 向List中添加一个活动
+     *
+     * @param activity 活动
+     */
+    public static void addActivity(Activity activity) {
+
+        activitys.add(activity);
+    }
+
+    /**
+     * 从List中移除活动
+     *
+     * @param activity 活动
+     */
+    public static void removeActivity(Activity activity) {
+
+        activitys.remove(activity);
+    }
+
+    /**
+     * 获取最新的activity
+     */
+    public static Activity getActivity() {
+
+        return activitys.get(activitys.size() - 1);
+    }
+
+    /**
+     * 将List中存储的活动全部销毁掉
+     */
+    public static void finishAll() {
+
+        for (Activity activity : activitys) {
+
+            if (!activity.isFinishing()) {
+
+                activity.finish();
+            }
+        }
+    }
+
+}

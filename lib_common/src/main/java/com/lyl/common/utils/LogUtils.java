@@ -2,9 +2,11 @@ package com.lyl.common.utils;
 
 import android.util.Log;
 /**
- * 日志相关类:默认是测试环境<br>
- * <b>支持：存储Log日志文件到本地。发送Log日志信息到服务器</b>
- *
+ * @author admin
+ * 描述:     日志相关类
+ * 作者:     梁亚龙
+ * 时间:     2019/12/28
+ * 版本:     1.0
  */
 public class LogUtils {
 

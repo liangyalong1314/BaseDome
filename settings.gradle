@@ -1,2 +1,3 @@
 include ':app', ':lib_common'
 rootProject.name='BaseDome'
+include ':lib_view'

@@ -6,9 +6,18 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
-
+/**
+ * @author admin
+ * 描述:     时间工具类
+ * 作者:     梁亚龙
+ * 时间:     2019/12/28
+ * 版本:     1.0
+ */
 public class DateUtils {
-    // 日期格式
+
+    /**
+     * 日期格式
+     */
     public static final String DATE_FORMAT = "yyyy-MM-dd";
     public static final String TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
     public static final String FORMAT_YYYY_MM = "yyyy-MM";
@@ -95,9 +104,9 @@ public class DateUtils {
     private static boolean isThisTime(Date date, String pattern) {
         SimpleDateFormat sdf = new SimpleDateFormat(pattern);
 
-        String param = sdf.format(date);//参数时间
+        String param = sdf.format(date);
 
-        String now = sdf.format(new Date());//当前时间
+        String now = sdf.format(new Date());
 
         if (param.equals(now)) {
             return true;
@@ -110,7 +119,7 @@ public class DateUtils {
      */
     public static int getDayOfMonth(int year, int month) {
         Calendar c = Calendar.getInstance();
-        c.set(year, month, 0); //输入类型为int类型
+        c.set(year, month, 0);
         return c.get(Calendar.DAY_OF_MONTH);
     }
 
@@ -183,7 +192,10 @@ public class DateUtils {
         cal.setTime(dt);
         int w = cal.get(Calendar.DAY_OF_WEEK)-1;
         if (w < 0)
+        {
             w = 0;
+        }
+
         return weekDays[w];
     }
 

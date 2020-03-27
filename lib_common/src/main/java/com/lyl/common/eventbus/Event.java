@@ -1,15 +1,24 @@
-package com.lyl.common.okgo;
+package com.lyl.common.eventbus;
+
 /**
  * @author admin
- * 描述:     请求基类
+ * 描述:     java类作用描述
  * 作者:     梁亚龙
- * 时间:     2019/12/28
+ * 时间:     2019/12/31
  * 版本:     1.0
  */
-public class MyResponse<T> {
+public class Event<T> {
     private int code;
     private T data;
-    private String msg;
+
+    public Event(int code) {
+        this.code = code;
+    }
+
+    public Event(int code, T data) {
+        this.code = code;
+        this.data = data;
+    }
 
     public int getCode() {
         return code;
@@ -25,13 +34,5 @@ public class MyResponse<T> {
 
     public void setData(T data) {
         this.data = data;
-    }
-
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
     }
 }

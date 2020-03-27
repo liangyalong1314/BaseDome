@@ -5,19 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.lyl.basedome.model.Penson;
-import com.lyl.common.utils.GsonUtils;
-
-import java.util.ArrayList;
-
-public class MainActivity extends AppCompatActivity {
+public class ViewListActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_view_list);
+
     }
 
-    public void clickView(View view) {
+    public void textViewBut(View view) {
     }
 }
